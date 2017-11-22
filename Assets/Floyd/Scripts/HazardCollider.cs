@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class HazardCollider : MonoBehaviour {
 
+    private static Score scoreScript;
+
+    private void Start()
+    {
+        if (!scoreScript)
+            scoreScript = GameObject.Find("Score").GetComponent<Score>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Platform")
         {
+            scoreScript.score++;
             this.gameObject.SetActive(false);
         }
 

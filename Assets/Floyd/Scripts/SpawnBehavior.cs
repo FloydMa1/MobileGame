@@ -6,12 +6,12 @@ public class SpawnBehavior : MonoBehaviour
 {
 
 
-    public float minX = 0.0f;
-    public float maxX = 0.0f;
+    public float minX = -6.0f;
+    public float maxX = 6.0f;
     public GameObject[] Hazards;
     public float timeBetweenSpawn = 0.0f;
     private bool canSpawn = false;
-    private int amountOfHazardsToSpawn = 0;
+    private int amountOfHazardsToSpawn = 4;
     private int hazardToSpawn = 0;
 
 	void Start ()
